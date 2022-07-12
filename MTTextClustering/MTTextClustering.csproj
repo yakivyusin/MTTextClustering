@@ -7,6 +7,10 @@
     <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="4.1.1" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MTTextClustering.Methods\MTTextClustering.Methods.csproj" />
+    <ProjectReference Include="..\MTTextClustering.Models\MTTextClustering.Models.csproj" />
+  </ItemGroup>
+  <ItemGroup>
     <None Update="host.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
