@@ -2,5 +2,11 @@
 {
     public enum ClusteringMethods
     {
+        BisectingKMeans,
+        SingleLink,
+        KMeans,
+        Dbscan,
+        Island,
+        ModifiedIsland
     }
 }
