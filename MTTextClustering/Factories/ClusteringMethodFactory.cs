@@ -9,6 +9,7 @@ namespace MTTextClustering.Factories
     {
         public static IClusteringMethod Create(ClusteringMethods method) => method switch
         {
+            ClusteringMethods.BisectingKMeans => new BisectingKMeans(),
             ClusteringMethods.KMeans => new FarthestPointsKMeans(),
             _ => throw new NotImplementedException(),
         };
