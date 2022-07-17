@@ -2,7 +2,7 @@
 {
     public record Text(
         Guid Id,
-        string Content)
+        string[] Terms)
     {
     }
 }
