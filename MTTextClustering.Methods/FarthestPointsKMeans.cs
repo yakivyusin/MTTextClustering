@@ -103,14 +103,27 @@ namespace MTTextClustering.Methods
 
         private DataPoint[] GetFarthestPoint(DataPoint[] points, int k)
         {
-            return points
-                .Take(1)
-                .Union(
-                    points
-                    .Skip(1)
-                    .OrderByDescending(x => x.GetDistance(points[0]))
-                    .Take(k - 1))
-                .ToArray();
+            var pointsAndDistances = new List<(double sumDistance, DataPoint[] points)>();
+
+            foreach (var point in points)
+            {
+                var farthestPoints = points
+                    .Select(x => new { Point = x, Distance = point.GetDistance(x) })
+                    .OrderByDescending(x => x.Distance)
+                    .Take(k - 1)
+                    .ToList();
+
+                farthestPoints.Insert(0, new { Point = point, Distance = 0.0 });
+
+                pointsAndDistances.Add(new (
+                    farthestPoints.Sum(x => x.Distance),
+                    farthestPoints.Select(x => x.Point).ToArray()));
+            }
+
+            return pointsAndDistances
+                .OrderByDescending(x => x.sumDistance)
+                .First()
+                .points;
         }
 
         private class DataPoint
