@@ -12,6 +12,7 @@ namespace MTTextClustering.Factories
             ClusteringMethods.BisectingKMeans => new BisectingKMeans(),
             ClusteringMethods.SingleLink => new HierarchicalSingleLink(),
             ClusteringMethods.KMeans => new FarthestPointsKMeans(),
+            ClusteringMethods.Dbscan => new Dbscan(),
             _ => throw new NotImplementedException(),
         };
     }
