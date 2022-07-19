@@ -23,7 +23,7 @@ namespace MTTextClustering.Methods
 
             var ts = (int)@params["ts"];
             var matrix = new MatrixCalculator().Matrix(texts, allLemmas, uniqueLemmas);
-            var matrixThreshold = 0.03 / (Math.Max(allLemmas.Length * allLemmas.Length, texts.Length));
+            var matrixThreshold = 100.0 / uniqueLemmas.Length;
 
             var filteredMatrix = matrix.Where(x => x.Correlation <= matrixThreshold).ToList();
             var termClusters = MatrixClustering(filteredMatrix, texts, ts);
