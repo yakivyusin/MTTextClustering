@@ -11,6 +11,7 @@ namespace MTTextClustering.Factories
         {
             ClusteringMethods.BisectingKMeans => new BisectingKMeans(),
             ClusteringMethods.KMeans => new FarthestPointsKMeans(),
+            ClusteringMethods.ModifiedIsland => new ModifiedIslandClustering(),
             _ => throw new NotImplementedException(),
         };
     }
