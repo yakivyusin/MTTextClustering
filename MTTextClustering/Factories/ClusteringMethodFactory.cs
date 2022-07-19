@@ -1,4 +1,4 @@
-﻿using MTTextClustering.Methods;
+﻿using MTTextClustering.Methods.Clustering;
 using MTTextClustering.Methods.Contracts;
 using MTTextClustering.Models;
 using System;

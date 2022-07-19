@@ -2,7 +2,7 @@
 using MTTextClustering.Methods.Helpers;
 using MTTextClustering.Models;
 
-namespace MTTextClustering.Methods
+namespace MTTextClustering.Methods.Clustering
 {
     // https://github.com/sabbirahmad/BisectingKMeans/blob/master/src/BisectingKMeans.java
     public class BisectingKMeans : IClusteringMethod, IKClusteringMethod
@@ -102,9 +102,9 @@ namespace MTTextClustering.Methods
         {
             public int Compare(double x, double y)
             {
-                if ((y - x) > 0)
+                if (y - x > 0)
                     return 1;
-                if ((y - x) < 0)
+                if (y - x < 0)
                     return -1;
                 else
                     return 0;

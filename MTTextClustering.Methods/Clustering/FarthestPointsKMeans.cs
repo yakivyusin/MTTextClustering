@@ -2,7 +2,7 @@
 using MTTextClustering.Methods.Helpers;
 using MTTextClustering.Models;
 
-namespace MTTextClustering.Methods
+namespace MTTextClustering.Methods.Clustering
 {
     // https://github.com/ArturVasyliev/Clustering/blob/master/Clustering/Clustering.Kmeans.cs
     public class FarthestPointsKMeans : IClusteringMethod, IKClusteringMethod
@@ -65,7 +65,7 @@ namespace MTTextClustering.Methods
                 for (int i = 0; i < k; i++)
                 {
                     DataPoint dp = new DataPoint(sum[i].Select(x => x / clusterSize[i]).ToArray());
-                    
+
                     if (dp.Vector.Any(x => double.IsNaN(x)))
                     {
                         throw new Exception("K value is too large for this set");
@@ -115,7 +115,7 @@ namespace MTTextClustering.Methods
 
                 farthestPoints.Insert(0, new { Point = point, Distance = 0.0 });
 
-                pointsAndDistances.Add(new (
+                pointsAndDistances.Add(new(
                     farthestPoints.Sum(x => x.Distance),
                     farthestPoints.Select(x => x.Point).ToArray()));
             }

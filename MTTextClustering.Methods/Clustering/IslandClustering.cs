@@ -3,7 +3,7 @@ using MTTextClustering.Methods.Helpers;
 using MTTextClustering.Models;
 using System.Collections;
 
-namespace MTTextClustering.Methods
+namespace MTTextClustering.Methods.Clustering
 {
     public class IslandClustering : IClusteringMethod
     {
@@ -301,9 +301,9 @@ namespace MTTextClustering.Methods
 
                 var matrix = new Matrix(uniqueLemmas.Length);
 
-                Parallel.For(0, uniqueLemmas.Length, (int i) =>
+                Parallel.For(0, uniqueLemmas.Length, (i) =>
                 {
-                    Parallel.For(i + 1, uniqueLemmas.Length, (int j) =>
+                    Parallel.For(i + 1, uniqueLemmas.Length, (j) =>
                     {
                         var cij = GetCorrelation(corpus, allLemmas, uniqueLemmas, i, j);
                         var cji = GetCorrelation(corpus, allLemmas, uniqueLemmas, j, i);

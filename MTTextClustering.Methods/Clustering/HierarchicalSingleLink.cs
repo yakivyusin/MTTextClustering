@@ -2,7 +2,7 @@
 using MTTextClustering.Methods.Helpers;
 using MTTextClustering.Models;
 
-namespace MTTextClustering.Methods
+namespace MTTextClustering.Methods.Clustering
 {
     // https://github.com/chen0040/java-clustering/blob/master/src/main/java/com/github/chen0040/clustering/hierarchical/HierarchicalClustering.java
     public class HierarchicalSingleLink : IClusteringMethod
@@ -17,7 +17,7 @@ namespace MTTextClustering.Methods
             {
                 var select_i = -1;
                 var select_j = -1;
-                var minDistance = Double.MaxValue;
+                var minDistance = double.MaxValue;
 
                 for (int i = 0; i < clusters.Length; i++)
                 {
@@ -78,7 +78,7 @@ namespace MTTextClustering.Methods
 
             public double GetSingleLinkDistance(Cluster other)
             {
-                var minDistance = Double.MaxValue;
+                var minDistance = double.MaxValue;
 
                 foreach (var vector in Vectors)
                 {

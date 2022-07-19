@@ -2,7 +2,7 @@
 using MTTextClustering.Methods.Helpers;
 using MTTextClustering.Models;
 
-namespace MTTextClustering.Methods
+namespace MTTextClustering.Methods.Clustering
 {
     // https://github.com/yusufuzun/dbscan/blob/master/DbscanImplementation/DbscanAlgorithm.cs
     public class Dbscan : IClusteringMethod
