@@ -15,7 +15,7 @@ namespace MTTextClustering.Methods.Evaluation
                 .Select(x => tfIdf[x])
                 .ToArray();
 
-            var maximumPairDistance = Double.MinValue;
+            var maximumPairDistance = 0.0;
 
             for (int i = 0; i < clusterVectors.Length; i++)
             {

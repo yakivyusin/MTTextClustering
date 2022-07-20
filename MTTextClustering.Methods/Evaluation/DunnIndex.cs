@@ -22,7 +22,9 @@ namespace MTTextClustering.Methods.Evaluation
                 }
             }
 
-            return minimumInterDistance / maximumIntraDistance;
+            return maximumIntraDistance == 0.0 ?
+                0.0 :
+                minimumInterDistance / maximumIntraDistance;
         }
     }
 }
