@@ -4,7 +4,9 @@
     <AzureFunctionsVersion>v4</AzureFunctionsVersion>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="CorDeGen" Version="1.0.0" />
     <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="4.1.1" />
+    <PackageReference Include="MTaaS.AttributiveGenerator" Version="1.0.0" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MTTextClustering.Methods\MTTextClustering.Methods.csproj" />
