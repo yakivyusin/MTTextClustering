@@ -1,9 +1,12 @@
-﻿namespace MTTextClustering.Models
+﻿using MTTextClustering.Models.JsonConverters;
+using System.Text.Json.Serialization;
+
+namespace MTTextClustering.Models
 {
     public record DataGeneratorModel(
         int TermsCount,
         ClusteringMethods Method,
-        Dictionary<string, object> Params)
+        [property: JsonConverter(typeof(DictionaryStringObjectJsonConverter))] Dictionary<string, object> Params)
     {
     }
 }
