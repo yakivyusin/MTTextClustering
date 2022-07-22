@@ -1,10 +1,12 @@
 ﻿using CorDeGen;
+using MTaaS.Attributes;
 using MTTextClustering.Models;
 using System;
 using System.Linq;
 
 namespace MTTextClustering.DataGenerators
 {
+    [DataGenerator("ReverseTexts")]
     public class DataGenerator
     {
         public InputModel Generate(DataGeneratorModel model)
