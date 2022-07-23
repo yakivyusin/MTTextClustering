@@ -8,6 +8,12 @@ using System.Linq;
 namespace MTTextClustering.OutputComparers
 {
     [OutputModelComparer("ReverseTexts")]
+    [OutputModelComparer("DuplicateText")]
+    [OutputModelComparer("DuplicateCorpus")]
+    [OutputModelComparer("ReverseTerms")]
+    [OutputModelComparer("ReverseParagraphs")]
+    [OutputModelComparer("DoubleTerms")]
+    [OutputModelComparer("ReverseParagraphTerms")]
     public class ClustersIgnoreOrderComparer : IEqualityComparer<OutputModel>
     {
         public bool Equals(OutputModel x, OutputModel y)

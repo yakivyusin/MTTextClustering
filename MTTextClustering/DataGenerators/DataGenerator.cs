@@ -7,17 +7,28 @@ using System.Linq;
 namespace MTTextClustering.DataGenerators
 {
     [DataGenerator("ReverseTexts")]
+    [DataGenerator("DuplicateText")]
+    [DataGenerator("DuplicateCorpus")]
+    [DataGenerator("ReverseTerms")]
+    [DataGenerator("ReverseParagraphs")]
+    [DataGenerator("DoubleTerms")]
+    [DataGenerator("ReverseParagraphTerms")]
     public class DataGenerator
     {
         public InputModel Generate(DataGeneratorModel model)
         {
             var corpusGenerator = new CorpusGenerator(model.TermsCount, ITermPresenter.Default);
-            var corpus = corpusGenerator
-                .GetCorpus()
-                .Select(x => new Text(Guid.NewGuid(), x))
+            var corpus = corpusGenerator.GetCorpus();
+            var guids = Enumerable.Range(1, corpus.Length)
+                .Select(x => new Guid(x, 22, 33, new byte[8] { 1, 2, 3, 4, 5, 6, 7, 8 }))
+                .OrderByDescending(x => x)
                 .ToArray();
 
-            return new InputModel(corpus, model.Method, model.Params);
+            var texts = corpus
+                .Select((x, i) => new Text(guids[i], x))
+                .ToArray();
+
+            return new InputModel(texts, model.Method, model.Params);
         }
     }
 }

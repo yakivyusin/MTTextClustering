@@ -6,6 +6,12 @@ using MTTextClustering.Models;
 namespace MTTextClustering.ArtifactEntryPoints
 {
     [ArtifactEntryPoint("ReverseTexts")]
+    [ArtifactEntryPoint("DuplicateText")]
+    [ArtifactEntryPoint("DuplicateCorpus")]
+    [ArtifactEntryPoint("ReverseTerms")]
+    [ArtifactEntryPoint("ReverseParagraphs")]
+    [ArtifactEntryPoint("DoubleTerms")]
+    [ArtifactEntryPoint("ReverseParagraphTerms")]
     public class ArtifactEntryPoint
     {
         private readonly DunnIndex _dunnIndex = new();
