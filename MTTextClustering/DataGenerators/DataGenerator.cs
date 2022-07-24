@@ -13,6 +13,10 @@ namespace MTTextClustering.DataGenerators
     [DataGenerator("ReverseParagraphs")]
     [DataGenerator("DoubleTerms")]
     [DataGenerator("ReverseParagraphTerms")]
+    [DataGenerator("AddOutlineText")]
+    [DataGenerator("AddOutlineTextDBI")]
+    [DataGenerator("SetKToDocumentsCount")]
+    [DataGenerator("DecreaseCorpus")]
     public class DataGenerator
     {
         public InputModel Generate(DataGeneratorModel model)

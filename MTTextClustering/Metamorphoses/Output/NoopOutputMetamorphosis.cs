@@ -8,6 +8,7 @@ namespace MTTextClustering.Metamorphoses.Output
     [OutputMetamorphosis("ReverseParagraphs")]
     [OutputMetamorphosis("DoubleTerms")]
     [OutputMetamorphosis("ReverseParagraphTerms")]
+    [OutputMetamorphosis("AddOutlineTextDBI")]
     public class NoopOutputMetamorphosis
     {
         public OutputModel Transform(OutputModel model)

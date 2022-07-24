@@ -14,6 +14,8 @@ namespace MTTextClustering.OutputComparers
     [OutputModelComparer("ReverseParagraphs")]
     [OutputModelComparer("DoubleTerms")]
     [OutputModelComparer("ReverseParagraphTerms")]
+    [OutputModelComparer("SetKToDocumentsCount")]
+    [OutputModelComparer("DecreaseCorpus")]
     public class ClustersIgnoreOrderComparer : IEqualityComparer<OutputModel>
     {
         public bool Equals(OutputModel x, OutputModel y)
