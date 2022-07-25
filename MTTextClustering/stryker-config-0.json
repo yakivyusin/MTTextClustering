@@ -5,6 +5,7 @@
     "test-case-filter": "FullyQualifiedName~MTTextClustering.Tests.BisectingKMeansTests",
     "mutate": [ "Clustering/BisectingKMeans.cs", "Helpers/TfIdfCalculator.cs" ],
     "reporters": [ "html", "progress", "json" ],
-    "coverage-analysis": "off"
+    "coverage-analysis": "off",
+    "disable-bail": true
   }
 }
