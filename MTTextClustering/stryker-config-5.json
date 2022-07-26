@@ -1,0 +1,11 @@
+{
+  "stryker-config": {
+    "solution": "../MTTextClustering.sln",
+    "project": "MTTextClustering.Methods.csproj",
+    "test-case-filter": "FullyQualifiedName~MTTextClustering.Tests.ModifiedIslandClusteringTests",
+    "mutate": [ "Clustering/ModifiedIslandClustering.cs", "Helpers/LinqExtensions.cs" ],
+    "reporters": [ "html", "progress", "json" ],
+    "coverage-analysis": "off",
+    "disable-bail": true
+  }
+}
