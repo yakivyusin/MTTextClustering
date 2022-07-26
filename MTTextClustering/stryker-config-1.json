@@ -1,0 +1,11 @@
+{
+  "stryker-config": {
+    "solution": "../MTTextClustering.sln",
+    "project": "MTTextClustering.Methods.csproj",
+    "test-case-filter": "FullyQualifiedName~MTTextClustering.Tests.HierarchicalSingleLinkTests",
+    "mutate": [ "Clustering/HierarchicalSingleLink.cs", "Helpers/TfIdfCalculator.cs" ],
+    "reporters": [ "html", "progress", "json" ],
+    "coverage-analysis": "off",
+    "disable-bail": true
+  }
+}
