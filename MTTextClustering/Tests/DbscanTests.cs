@@ -19,6 +19,7 @@ namespace MTTextClustering.Tests
             });
 
         [Fact]
+        [Trait("MR", "MR1")]
         public void ReverseTexts()
         {
             var dataGenerator = new DataGenerator();
@@ -29,6 +30,7 @@ namespace MTTextClustering.Tests
         }
 
         [Fact]
+        [Trait("MR", "MR2")]
         public void DuplicateCorpus()
         {
             var dataGenerator = new DataGenerator();
@@ -39,6 +41,7 @@ namespace MTTextClustering.Tests
         }
 
         [Fact]
+        [Trait("MR", "MR3")]
         public void DuplicateText()
         {
             var dataGenerator = new DataGenerator();
@@ -49,6 +52,7 @@ namespace MTTextClustering.Tests
         }
 
         [Fact]
+        [Trait("MR", "MR4")]
         public void ReverseTerms()
         {
             var dataGenerator = new DataGenerator();
@@ -59,6 +63,7 @@ namespace MTTextClustering.Tests
         }
 
         [Fact]
+        [Trait("MR", "MR5")]
         public void ReverseParagraphs()
         {
             var dataGenerator = new DataGenerator();
@@ -69,6 +74,7 @@ namespace MTTextClustering.Tests
         }
 
         [Fact]
+        [Trait("MR", "MR6")]
         public void ReverseParagraphTerms()
         {
             var dataGenerator = new DataGenerator();
@@ -79,6 +85,7 @@ namespace MTTextClustering.Tests
         }
 
         [Fact]
+        [Trait("MR", "MR7")]
         public void DoubleTerms()
         {
             var dataGenerator = new DataGenerator();
