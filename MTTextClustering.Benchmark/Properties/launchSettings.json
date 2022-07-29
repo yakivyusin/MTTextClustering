@@ -1,0 +1,52 @@
+{
+  "profiles": {
+    "Azure Bisecting k-means": {
+      "commandName": "Project",
+      "commandLineArgs": "--method 0 --base-url https://mttextclustering.azurewebsites.net/api/ --endpoints AddOutlineText --endpoints AddOutlineTextDBI --endpoints DecreaseCorpus --endpoints DoubleTerms --endpoints DuplicateCorpus --endpoints DuplicateText --endpoints ReverseParagraphs --endpoints ReverseParagraphTerms --endpoints ReverseTerms --endpoints ReverseTexts --endpoints SetKToDocumentsCount"
+    },
+    "Azure Single Link": {
+      "commandName": "Project",
+      "commandLineArgs": "--method 1 --base-url https://mttextclustering.azurewebsites.net/api/ --endpoints DoubleTerms --endpoints DuplicateCorpus --endpoints DuplicateText --endpoints ReverseParagraphs --endpoints ReverseParagraphTerms --endpoints ReverseTerms --endpoints ReverseTexts"
+    },
+    "Azure k-means": {
+      "commandName": "Project",
+      "commandLineArgs": "--method 2 --base-url https://mttextclustering.azurewebsites.net/api/ --endpoints AddOutlineText --endpoints AddOutlineTextDBI --endpoints DecreaseCorpus --endpoints DoubleTerms --endpoints DuplicateCorpus --endpoints DuplicateText --endpoints ReverseParagraphs --endpoints ReverseParagraphTerms --endpoints ReverseTerms --endpoints ReverseTexts --endpoints SetKToDocumentsCount"
+    },
+    "Azure DBSCAN": {
+      "commandName": "Project",
+      "commandLineArgs": "--method 3 --base-url https://mttextclustering.azurewebsites.net/api/ --endpoints DoubleTerms --endpoints DuplicateCorpus --endpoints DuplicateText --endpoints ReverseParagraphs --endpoints ReverseParagraphTerms --endpoints ReverseTerms --endpoints ReverseTexts"
+    },
+    "Azure island": {
+      "commandName": "Project",
+      "commandLineArgs": "--method 4 --base-url https://mttextclustering.azurewebsites.net/api/ --endpoints DoubleTerms --endpoints DuplicateCorpus --endpoints DuplicateText --endpoints ReverseParagraphs --endpoints ReverseParagraphTerms --endpoints ReverseTerms --endpoints ReverseTexts"
+    },
+    "Azure modified island": {
+      "commandName": "Project",
+      "commandLineArgs": "--method 5 --base-url https://mttextclustering.azurewebsites.net/api/ --endpoints AddOutlineText --endpoints AddOutlineTextDBI --endpoints DecreaseCorpus --endpoints DoubleTerms --endpoints DuplicateCorpus --endpoints DuplicateText --endpoints ReverseParagraphs --endpoints ReverseParagraphTerms --endpoints ReverseTerms --endpoints ReverseTexts --endpoints SetKToDocumentsCount"
+    },
+    "Local Bisecting k-means": {
+      "commandName": "Project",
+      "commandLineArgs": "--method 0 --base-url http://localhost:7071/api/ --endpoints AddOutlineText --endpoints AddOutlineTextDBI --endpoints DecreaseCorpus --endpoints DoubleTerms --endpoints DuplicateCorpus --endpoints DuplicateText --endpoints ReverseParagraphs --endpoints ReverseParagraphTerms --endpoints ReverseTerms --endpoints ReverseTexts --endpoints SetKToDocumentsCount"
+    },
+    "Local Single Link": {
+      "commandName": "Project",
+      "commandLineArgs": "--method 1 --base-url http://localhost:7071/api/ --endpoints DoubleTerms --endpoints DuplicateCorpus --endpoints DuplicateText --endpoints ReverseParagraphs --endpoints ReverseParagraphTerms --endpoints ReverseTerms --endpoints ReverseTexts"
+    },
+    "Local k-means": {
+      "commandName": "Project",
+      "commandLineArgs": "--method 2 --base-url http://localhost:7071/api/ --endpoints AddOutlineText --endpoints AddOutlineTextDBI --endpoints DecreaseCorpus --endpoints DoubleTerms --endpoints DuplicateCorpus --endpoints DuplicateText --endpoints ReverseParagraphs --endpoints ReverseParagraphTerms --endpoints ReverseTerms --endpoints ReverseTexts --endpoints SetKToDocumentsCount"
+    },
+    "Local DBSCAN": {
+      "commandName": "Project",
+      "commandLineArgs": "--method 3 --base-url http://localhost:7071/api/ --endpoints DoubleTerms --endpoints DuplicateCorpus --endpoints DuplicateText --endpoints ReverseParagraphs --endpoints ReverseParagraphTerms --endpoints ReverseTerms --endpoints ReverseTexts"
+    },
+    "Local island": {
+      "commandName": "Project",
+      "commandLineArgs": "--method 4 --base-url http://localhost:7071/api/ --endpoints DoubleTerms --endpoints DuplicateCorpus --endpoints DuplicateText --endpoints ReverseParagraphs --endpoints ReverseParagraphTerms --endpoints ReverseTerms --endpoints ReverseTexts"
+    },
+    "Local modified island": {
+      "commandName": "Project",
+      "commandLineArgs": "--method 5 --base-url http://localhost:7071/api/ --endpoints AddOutlineText --endpoints AddOutlineTextDBI --endpoints DecreaseCorpus --endpoints DoubleTerms --endpoints DuplicateCorpus --endpoints DuplicateText --endpoints ReverseParagraphs --endpoints ReverseParagraphTerms --endpoints ReverseTerms --endpoints ReverseTexts --endpoints SetKToDocumentsCount"
+    }
+  }
+}
